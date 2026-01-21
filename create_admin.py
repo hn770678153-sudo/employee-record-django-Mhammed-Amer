@@ -1,3 +1,10 @@
+import os
+import django
+
+# Ensure Django settings are loaded when running this script directly
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'employeerecord.settings')
+django.setup()
+
 from django.contrib.auth import get_user_model
 
 User = get_user_model()
