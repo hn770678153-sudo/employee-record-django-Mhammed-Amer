@@ -42,7 +42,12 @@ CSRF_TRUSTED_ORIGINS = [
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_HTTPONLY = True
-
+CSRF_TRUSTED_ORIGINS = [
+    "https://artistic-alignment-production.up.railway.app",
+    "https://*.up.railway.app"
+]
+# أضف هذا إذا لم يعمل ما سبق:
+CSRF_VERIFY_SUBDOMAIN = False
 
 # Application definition
 
