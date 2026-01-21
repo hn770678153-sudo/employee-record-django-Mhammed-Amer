@@ -30,7 +30,18 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'unsafe-secret-key')
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['artistic-alignment-production.up.railway.app', 'localhost', '127.0.0.1', '.up.railway.app']
+
+# CSRF trusted origins
+CSRF_TRUSTED_ORIGINS = [
+    "https://artistic-alignment-production.up.railway.app",
+    "https://*.up.railway.app" # هذا السطر سيجعل الموقع يقبل أي رابط فرعي من ريلواي
+]
+
+# تأكد أيضاً من إضافة هذا السطر لضمان معالجة الـ Cookies بشكل آمن
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_HTTPONLY = True
 
 
 # Application definition
