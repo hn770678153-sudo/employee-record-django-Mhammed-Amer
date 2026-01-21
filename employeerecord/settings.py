@@ -169,13 +169,12 @@ MEDIA_ROOT = BASE_DIR / 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'ersapp.CustomUser'
 # إعدادات Cloudinary
-INSTALLED_APPS = [
+#INSTALLED_APPS = [
     # ... اترك الإضافات الأخرى كما هي وأضف هذه:
-    'cloudinary_storage',
-    'django.contrib.staticfiles',
-    'cloudinary',
-    'ersapp',
-]
+ #   'cloudinary_storage',
+  ## 'cloudinary',
+    #'ersapp',
+#]
 
 # أضف هذه السطور في آخر الملف تماماً
 CLOUDINARY_STORAGE = {
@@ -183,4 +182,4 @@ CLOUDINARY_STORAGE = {
     'API_KEY': '434778174737873',
     'API_SECRET': 'p-7XUo-L-X6p6Z_B8nO8J_R6O7s' 
 }
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+#DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
