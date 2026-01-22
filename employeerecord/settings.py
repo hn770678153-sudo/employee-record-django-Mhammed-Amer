@@ -58,6 +58,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
+    'cloudinary',
     'ersapp',
 ]
 
@@ -182,4 +184,9 @@ CLOUDINARY_STORAGE = {
     'API_KEY': '434778174737873',
     'API_SECRET': 'p-7XUo-L-X6p6Z_B8nO8J_R6O7s' 
 }
-#DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+# حل مشكلة الدخول من الجوال
+CSRF_COOKIE_SAMESITE = 'None'
+SESSION_COOKIE_SAMESITE = 'None'
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
